@@ -23,14 +23,16 @@ from . import Backbone
 from ..utils.image import preprocess_image
 
 
-allowed_backbones = {
+
+
+class DenseNetBackbone(Backbone):
+    
+    allowed_backbones = {
     'densenet121': ([6, 12, 24, 16], densenet.DenseNet121),
     'densenet169': ([6, 12, 32, 32], densenet.DenseNet169),
     'densenet201': ([6, 12, 48, 32], densenet.DenseNet201),
 }
 
-
-class DenseNetBackbone(Backbone):
     """ Describes backbone information and provides utility functions.
     """
 
